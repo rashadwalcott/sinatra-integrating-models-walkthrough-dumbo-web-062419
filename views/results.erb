@@ -1,9 +1,10 @@
 <h1>Your Text Analysis</h1>
 
-<h2>Number of Words: </h2>
+<h2>Number of Words: <%= @wordcount.to_s %> </h2>
 
-<h2>Vowels: </h2>
+<h2>Vowels: <%= @vowelcount.to_s %> </h2>
 
-<h2>Consonants: </h2>
-
-<h2>Most Common Letter: _____ used _____ times</h2>
+<h2>Consonants: <%= @count_of_consonants.to_s %> </h2>
+<% @common_letter.each do |key,value|%>
+<h2>Most Common Letter: <%= key.upcase %>, used <%= value.to_s %> times</h2>
+<%end%>
